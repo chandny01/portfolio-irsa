@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irsa Ahmad — Ingénieure Réseaux &amp; Sécurité</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+<div class="scroll-line" id="scrollLine"></div>
+<div class="availability-badge">Disponible — Mi-Août-Septembre 2026</div>
+
+<!-- PANEL COMPÉTENCE → PROJETS -->
+<div id="skills-projects-panel">
+  <div class="panel-inner" style="position:relative;">
+    <button class="panel-close" id="panelClose">✕</button>
+    <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">Compétence</p>
+    <h2 class="panel-skill-title" id="panelSkillTitle"></h2>
+    <p class="panel-skill-desc" id="panelSkillDesc"></p>
+    <p style="font-family:var(--font-mono);font-size:.8rem;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;">Projets associés</p>
+    <div class="panel-project-list" id="panelProjectList"></div>
+  </div>
+</div>
+
+<!-- ======================================================
+     NAVIGATION
+     ====================================================== -->
+<nav>
+  <a href="#hero" class="nav-logo">Irsa<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">Profil</a></li>
+    <li><a href="#skills-academic">Compétences</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#education">Formation</a></li>
+    <li><a href="#certifications">Certifs</a></li>
+    <li><a href="#theatre">Théâtre</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle"><span id="themeIcon">☀️ Light</span></button>
+    <a href="https://www.linkedin.com/in/irsa-ahmad" target="_blank" class="nav-cta">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div><div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Ingénieure en alternance — ESIEE Paris</div>
+    <h1 class="hero-name">Irsa<br><span class="line2">Ahmad.</span></h1>
+    <p class="hero-subtitle">Future Ingénieure Réseaux &amp; Sécurité</p>
+    <p class="hero-tags-line">
+      <span>Réseaux informatiques · Ingénierie réseaux · Infrastructure DevOps</span><br>
+      <span>Systèmes · Sécurité informatique</span>
+    </p>
+    <p class="hero-bio">
+      Étudiante-ingénieure fortement investie dans le domaine des réseaux informatiques, l'infrastructure et DevOps. <strong>Force de rigueur technique, esprit d'équipe et curiosité.</strong></p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Me contacter</a>
+      <a href="https://www.linkedin.com/in/irsa-ahmad" target="_blank" class="btn-secondary">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <div class="mail-btn-wrap">
+        <button class="btn-secondary mail-trigger">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Mail
+        </button>
+        <div class="mail-reveal">ahmad.irsa[arobase]Hotmail.com</div>
+      </div>
+      <a href="https://github.com/Irsa-crypto" target="_blank" class="btn-secondary">
+        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">3<span>ans</span></span><span class="stat-label">Alternance ESIEE</span></div>
+      <div class="stat"><span class="stat-num">6<span>+</span></span><span class="stat-label">Projets majeurs</span></div>
+      <div class="stat"><span class="stat-num">864</span><span class="stat-label">Score TOEIC</span></div>
+      <div class="stat"><span class="stat-num">Cisco<span>®</span></span><span class="stat-label">Certifiée Technicienne Réseau</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     ABOUT
+     ====================================================== -->
+<section id="about">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Qui suis-je</p>
+    <h2 class="section-title">Profil <em>complet</em></h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text fade-in">
+      <p>Fortement investie dans le domaine des <strong>réseaux informatiques</strong> et forte d'une première expérience solide, j'allie rigueur technique — BUT, Certification Cisco — et <strong>capacités relationnelles</strong> construites à travers le tutorat, le théâtre et l'engagement associatif.</p>
+      <p>Ayant une curiosité technique et dotée d'une forte appétence pour l'apprentissage, je me nourris de chaque mission pour <strong>approfondir ma maîtrise des systèmes complexes</strong> : de la configuration d'équipements réseau jusqu'à l'audit offensif de cœur 5G.</p>
+      <p>Mon approche : comprendre en profondeur avant d'agir. <strong>Précision, fiabilité et esprit critique</strong> guident chacune de mes interventions techniques.</p>
+    </div>
+    <div class="fade-in fade-in-delay-1">
+      <div class="highlight-item"><p class="highlight-label">Formation actuelle</p><p class="highlight-value">Cycle ingénieur Réseaux &amp; Sécurité — ESIEE Paris UGE</p></div>
+      <div class="highlight-item"><p class="highlight-label">Poste actuel</p><p class="highlight-value">Stagiaire 5G &amp; VoIP — FutureNetworx (03–05/2026)</p></div>
+      <div class="highlight-item"><p class="highlight-label">Langues</p><p class="highlight-value">Français · Anglais (B2-C1)</p></div>
+      <div class="highlight-item"><p class="highlight-label">TOEIC</p><p class="highlight-value">864 points</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     COMPÉTENCES ACADÉMIQUES
+     ====================================================== -->
+<section id="skills-academic">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Référentiel BUT R&T</p>
+    <h2 class="section-title">Compétences <em>académiques</em></h2>
+  </div>
+  <div class="academic-grid">
+
+    <div class="academic-card fade-in">
+      <p class="academic-card-num">01 / 05</p>
+      <h3 class="academic-card-title">Administrer les réseaux et l'Internet</h3>
+      <p class="academic-card-desc">Conception, configuration, administration et sécurisation des infrastructures réseau permettant d'assurer le bon fonctionnement des systèmes informatiques et des services Internet. Gestion des équipements réseau, des serveurs, des systèmes virtualisés ainsi que la supervision et le maintien en condition opérationnelle des architectures réseau d'entreprise.</p>
+      <button class="skill-projects-btn" data-skill-key="admin">Voir les projets associés <span class="arrow">→</span></button>
+    </div>
+
+    <div class="academic-card fade-in fade-in-delay-1">
+      <p class="academic-card-num">02 / 05</p>
+      <h3 class="academic-card-title">Connecter les entreprises et les usagers</h3>
+      <p class="academic-card-desc">Déploiement et intégration des solutions de télécommunications permettant de relier les entreprises, les utilisateurs et les différents réseaux de communication. Installation et maintenance des infrastructures cuivre, fibre optique, Wi-Fi et mobiles, ainsi que l'analyse des technologies de transmission de données et de traitement du signal.</p>
+      <button class="skill-projects-btn" data-skill-key="connecter">Voir les projets associés <span class="arrow">→</span></button>
+    </div>
+
+    <div class="academic-card fade-in fade-in-delay-2">
+      <p class="academic-card-num">03 / 05</p>
+      <h3 class="academic-card-title">Créer des outils et applications informatiques pour les R&amp;T</h3>
+      <p class="academic-card-desc">Développement d'outils logiciels et d'applications destinés à l'administration, l'automatisation et l'exploitation des réseaux et systèmes de télécommunications. Programmation, scripts d'automatisation, développement web et création de solutions facilitant la supervision, la gestion et la sécurisation des infrastructures numériques.</p>
+      <button class="skill-projects-btn" data-skill-key="creer">Voir les projets associés <span class="arrow">→</span></button>
+    </div>
+
+    <div class="academic-card fade-in">
+      <p class="academic-card-num">04 / 05</p>
+      <h3 class="academic-card-title">Gérer les infrastructures et les services des réseaux opérateurs</h3>
+      <p class="academic-card-desc">Exploitation, pilotage et maintenance des infrastructures utilisées par les opérateurs télécoms pour fournir des services réseau aux entreprises et aux particuliers. Supervision des équipements opérateurs, gestion des incidents, suivi des performances réseau ainsi que le déploiement des services de connectivité et d'accès Internet à grande échelle.</p>
+      <button class="skill-projects-btn" data-skill-key="infra">Voir les projets associés <span class="arrow">→</span></button>
+    </div>
+
+    <div class="academic-card fade-in fade-in-delay-1">
+      <p class="academic-card-num">05 / 05</p>
+      <h3 class="academic-card-title">Gérer les communications unifiées et la vidéo sur Internet</h3>
+      <p class="academic-card-desc">Mise en place, administration et optimisation des solutions de communication multimédia utilisées en environnement professionnel. Téléphonie sur IP, visioconférence, streaming vidéo et collaboration à distance, tout en garantissant la qualité de service, la disponibilité et la sécurité des échanges numériques.</p>
+      <button class="skill-projects-btn" data-skill-key="multimedia">Voir les projets associés <span class="arrow">→</span></button>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     COMPÉTENCES TECHNIQUES
+     ====================================================== -->
+<section id="skills">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Savoir-faire</p>
+    <h2 class="section-title">Compétences <em>techniques</em></h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-category network fade-in">
+      <p class="skill-cat-title">🌐 Réseau &amp; Protocoles</p>
+      <div class="skill-tags">
+        <span class="skill-tag hot">Cisco</span><span class="skill-tag hot">Mikrotik</span><span class="skill-tag">Fortinet</span><span class="skill-tag">Stormshield</span><span class="skill-tag hot">VLAN / 802.1Q</span><span class="skill-tag">VPN</span><span class="skill-tag">DHCP</span><span class="skill-tag">DNS</span><span class="skill-tag">SNMP</span><span class="skill-tag hot">BGP</span><span class="skill-tag">IPsec</span><span class="skill-tag">QoS</span><span class="skill-tag">OSI / TCP-UDP</span><span class="skill-tag">ACL</span>
+      </div>
+    </div>
+    <div class="skill-category security fade-in fade-in-delay-1">
+      <p class="skill-cat-title">🔒 Sécurité &amp; Télécoms 5G/VoIP</p>
+      <div class="skill-tags">
+        <span class="skill-tag hot">Audit vulnérabilités</span><span class="skill-tag hot">5G Core</span><span class="skill-tag hot">VoIP / SIP</span><span class="skill-tag hot">Asterisk</span><span class="skill-tag hot">Kamailio</span><span class="skill-tag">Trunk SIP</span><span class="skill-tag">LSTM</span><span class="skill-tag">TRex</span><span class="skill-tag">PassRad</span><span class="skill-tag">MCX / Criti-Call</span><span class="skill-tag">RADIUS</span><span class="skill-tag">2FA</span>
+      </div>
+    </div>
+    <div class="skill-category system fade-in fade-in-delay-2">
+      <p class="skill-cat-title">📦 Virtualisation &amp; Systèmes</p>
+      <div class="skill-tags">
+        <span class="skill-tag hot">Linux / Debian</span><span class="skill-tag hot">Docker</span><span class="skill-tag hot">Proxmox</span><span class="skill-tag hot">VMware</span><span class="skill-tag">VirtualBox</span><span class="skill-tag hot">GNS3</span><span class="skill-tag">Packet Tracer</span><span class="skill-tag">Wireshark</span><span class="skill-tag">MySQL</span>
+      </div>
+    </div>
+    <div class="skill-category support fade-in">
+      <p class="skill-cat-title">🛠 Support IT &amp; Administration</p>
+      <div class="skill-tags">
+        <span class="skill-tag hot">Diagnostic incidents N1→N3</span><span class="skill-tag">Windows / iOS / Android</span><span class="skill-tag">Déploiement postes</span><span class="skill-tag hot">Azure AD</span><span class="skill-tag">Microsoft 365</span><span class="skill-tag">Gestion identités &amp; accès</span><span class="skill-tag">Wi-Fi entreprise</span><span class="skill-tag">Câblage</span><span class="skill-tag">Yealink</span><span class="skill-tag">Rédaction procédures</span>
+      </div>
+    </div>
+    <div class="skill-category dev fade-in fade-in-delay-1">
+      <p class="skill-cat-title">💻 Développement &amp; Scripting</p>
+      <div class="skill-tags">
+        <span class="skill-tag hot">PowerShell</span><span class="skill-tag hot">Python</span><span class="skill-tag">Bash</span><span class="skill-tag hot">Kamailio scripting</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">PHP</span><span class="skill-tag">Git / GitHub</span><span class="skill-tag">Méthode Agile</span><span class="skill-tag">Kanban</span>
+      </div>
+    </div>
+    <div class="skill-category tools fade-in fade-in-delay-2">
+      <p class="skill-cat-title">⚙️ Outils &amp; Logiciels Pro</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Atera</span><span class="skill-tag">Office 365</span><span class="skill-tag">Odoo</span><span class="skill-tag">Bookstack</span><span class="skill-tag">OBS Studio</span><span class="skill-tag">OwnCast</span><span class="skill-tag">Docker Compose</span><span class="skill-tag">Trello</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     COMPÉTENCES TRANSVERSES
+     ====================================================== -->
+<section id="skills-transverses">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">SAVOIR-ÊTRE</p>
+    <h2 class="section-title">Compétences <em>transverses</em></h2>
+  </div>
+  <div class="transverses-grid fade-in">
+    <div class="transverse-card">
+      <p class="transverse-card-title">💡 Rigueur &amp; Méthode</p>
+      <ul class="transverse-items">
+        <li>Proactivité &amp; rigueur dans chaque mission</li>
+        <li>Précision et fiabilité dans les livrables</li>
+        <li>Auto-évaluation &amp; esprit critique</li>
+        <li>Gestion du stress en situation complexe</li>
+      </ul>
+    </div>
+    <div class="transverse-card">
+      <p class="transverse-card-title">🤝 Collaboration &amp; Communication</p>
+      <ul class="transverse-items">
+        <li>Esprit d'équipe &amp; collaboration transverse</li>
+        <li>Force de proposition — solutions concrètes</li>
+        <li>Pédagogie (tutorat de groupes d'étudiants)</li>
+        <li>Aisance rédactionnelle technique FR &amp; EN</li>
+      </ul>
+    </div>
+    <div class="transverse-card">
+      <p class="transverse-card-title">🎯 Adaptabilité &amp; Curiosité</p>
+      <ul class="transverse-items">
+        <li>Apprentissage rapide des nouvelles technologies</li>
+        <li>Veille technologique active</li>
+        <li>Curiosité interculturelle &amp; ouverture</li>
+        <li>Gestion de projets en méthode Agile</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     EXPÉRIENCES
+     ====================================================== -->
+<section id="experience">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Parcours pro</p>
+    <h2 class="section-title">Expériences <em>professionnelles</em></h2>
+  </div>
+  <div class="timeline">
+
+    <!-- FutureNetworx -->
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <p class="timeline-meta">Mars 2026 – Mai 2026</p>
+      <div class="timeline-header">
+        <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/future-networx-948573316" target="_blank" class="timeline-company">Stagiaire Ingénierie Réseaux et Télécom 5G</a>
+        <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/future-networx-948573316" target="_blank" class="timeline-company-link">↗ annuaire</a>
+      </div>
+
+      <p class="timeline-role">Stage chez FutureNetworx    →     <span>Startup / Conseil télécom</span>
+        <span>5G privée · réseaux mobiles · cybersécurité · innovation télécom</span> <em>Infrastructure</em></p>
+      <ul class="timeline-items">
+        <li>Interconnexion réseau d'opérateur 5G &amp; client VoIP via Trunk SIP &amp; scripts Kamailio sur infrastructure conteneurisée (Docker / Kamailio / Asterisk)</li>
+        <li>Déploiement d'une passerelle multimédia entre MCx, Criti-Call et PassRad : configurations &amp; rédaction du référentiel technique</li>
+        <li>Audit offensif du cœur de réseau 5G via simulations d'attaques — étude de vulnérabilités &amp; entraînement d'un modèle LSTM avec génération de trafic TRex</li>
+      </ul>
+      <!-- Remplace href="#" par le chemin vers ton attestation PDF : ex href="docs/attestation_futurenetworx.pdf" -->
+      <a href="data/Convention_stage.pdf" class="timeline-attestation">📄 Voir la convention de stage</a>
+    </div>
+
+    <!-- Agitel -->
+    <div class="timeline-item fade-in fade-in-delay-1">
+      <div class="timeline-dot" style="background:var(--accent2)"></div>
+      <p class="timeline-meta">Décembre 2024 – Septembre 2025</p>
+      <div class="timeline-header">
+        <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/agitel-telecom-788868982" target="_blank" class="timeline-company">Apprentie Administratrice Systèmes &amp; Réseaux</a>
+        <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/agitel-telecom-788868982" target="_blank" class="timeline-company-link">↗ annuaire</a>
+      </div>
+
+      <p class="timeline-role">Alternance chez Agitel Télécom     →<span> PME / ESN</span> 
+        <span>Infogérance IT · Réseaux · Télécoms ·  Cybersécurité · Wi-Fi entreprise</span> <em>Support N1 → N3</em>   </p>
+      <ul class="timeline-items">
+        <li>Support technique N1 à N3 : diagnostic &amp; résolution d'incidents réseau et systèmes (switch, routeur, firewall, bornes Wi-Fi)</li>
+        <li>Configuration matériel réseau : Fortinet, Mikrotik, Yealink, équipements TPE</li>
+        <li>Préparation et déploiement de postes utilisateurs (Windows, Android, iOS)</li>
+        <li>Rédaction des procédures techniques et support client</li>
+        <li>Gestion des identités et des accès Azure AD / Microsoft 365 &amp; optimisation des infrastructures réseau</li>
+      </ul>
+      <a href="data/contrat_alternance_agitel.pdf" class="timeline-attestation">📄 Voir le contrat d'alternance </a>
+    </div>
+
+    <!-- IUT Villetaneuse -->
+    <div class="timeline-item fade-in fade-in-delay-2">
+      <div class="timeline-dot" style="background:var(--accent3)"></div>
+      <p class="timeline-meta">Février 2025 – Juin 2026</p>
+      <div class="timeline-header">
+        <a href="https://www.univ-spn.fr/" target="_blank" class="timeline-company">Tutrice Académique des 1ères années de BUT</a>
+        <a href="https://www.univ-spn.fr/" target="_blank" class="timeline-company-link">↗ site</a>
+      </div>
+
+      <p class="timeline-role">Contrat étudiant au sein de l'Université Sorbonne Paris 13 <em>Pédagogie</em></p>
+      <ul class="timeline-items">
+        <li><strong style="color:var(--text)">2025-2026 :</strong> Accompagnement de 4 groupes (20 étudiants) en 1ère année BUT R&amp;T — révisions, examens, TD/TP</li>
+        <li><strong style="color:var(--text)">2024-2025 :</strong> Tutorat en petit groupe d'étudiants BUT R&amp;T — suivi personnalisé, soutien aux cours et remédiation</li>
+      </ul>
+    </div>
+
+    <!-- La Vie -->
+    <div class="timeline-item fade-in fade-in-delay-3">
+      <div class="timeline-dot" style="background:#f7a26a"></div>
+      <p class="timeline-meta">Juin 2020 - Juin 2026</p>
+      <div class="timeline-header">
+        <span class="timeline-company" style="cursor:default">Vendeuse · Prêt-à-Porter</span>
+      </div>
+
+      <p class="timeline-role">- À Temps partiel chez La Vie -          →          <span>Magasin de vente textile prêt-à-porter</span> <em>Commerce &amp; relation client</em>
+ </p>
+      <ul class="timeline-items">
+        <li>Accueil, conseil personnalisé et fidélisation de la clientèle en magasin</li>
+        <li>Gestion des stocks, mise en rayon et merchandising</li>
+        <li>Encaissement &amp; gestion des transactions</li>
+        <li>Travail en équipe et participation à l'atteinte des objectifs commerciaux</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     FORMATION
+     ====================================================== -->
+<section id="education">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Parcours académique</p>
+    <h2 class="section-title">Formation <em>&amp; diplômes</em></h2>
+  </div>
+
+  <div class="edu-card fade-in">
+    <div class="edu-year">2026 → 2029</div>
+    <div>
+      <p class="edu-school">Cycle d'Ingénieur Réseaux &amp; Sécurité <br> ESIEE Paris — Université Gustave Eiffel</p>
+      <p class="edu-degree">Formation en cycle d'Ingénieur Réseaux &amp; Sécurité en apprentissage</p>
+      <span class="edu-badge">Labellisée SecNumedu par l'ANSSI</span>
+    </div>
+    <!-- Syllabus ESIEE : remplace href="#" par "docs/syllabus_esiee.pdf" quand tu as le fichier -->
+    <div class="edu-syllabus">
+      <a href="data/programme_national_esiee.pdf" target="_blank" title="Voir le syllabus ESIEE">
+        <div class="edu-syllabus-preview">
+          <span class="edu-syllabus-icon">📄</span>
+          <span class="edu-syllabus-label">Syllabus<br>ESIEE</span>
+        </div>
+      </a>
+      <span class="edu-syllabus-caption">Cliquer pour<br>visualiser</span>
+    </div>
+  </div>
+
+  <div class="edu-card fade-in fade-in-delay-1">
+    <div class="edu-year">2023 → 2026</div>
+    <div>
+      <p class="edu-school">Bachelor Universitaire Technologique Réseaux &amp; Télécommunications (Bac+3) <br>Université Sorbonne Paris 13 — IUT de Villetaneuse</p>
+      <p class="edu-degree">Classée 2ème de la promotion</p>
+      <span class="edu-badge">Diplômée 2026 · Labellisée SecNumedu par l'ANSSI</span>
+    </div>
+    <!-- Syllabus BUT R&T : remplace href="#" par "docs/syllabus_but_rt.pdf" -->
+    <div class="edu-syllabus">
+      <a href="data/programme_nationalrt30876.pdf" target="_blank" title="Voir le programme BUT R&T">
+        <div class="edu-syllabus-preview">
+          <span class="edu-syllabus-icon">📄</span>
+          <span class="edu-syllabus-label">Programme<br>BUT R&T</span>
+        </div>
+      </a>
+      <span class="edu-syllabus-caption">Cliquer pour<br>visualiser</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     RÉALISATIONS — PROJETS
+     ====================================================== -->
+<section id="projects">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Réalisations</p>
+    <h2 class="section-title">Projets <em>pro &amp; académiques</em></h2>
+  </div>
+
+  <!-- FILTRE PAR COMPÉTENCE -->
+  <div class="fade-in">
+    <span class="filter-label">Filtrer par compétence académique :</span>
+    <div class="projects-filter">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="admin">Administrer réseaux</button>
+      <button class="filter-btn" data-filter="connecter">Connecter entreprises</button>
+      <button class="filter-btn" data-filter="creer">Créer outils R&T</button>
+      <button class="filter-btn" data-filter="infra">Gérer infra opérateurs</button>
+      <button class="filter-btn" data-filter="multimedia">Communications unifiées</button>
+    </div>
+  </div>
+
+  <!-- SOUS-SECTION 1 : PROJETS PROFESSIONNELS -->
+  <div class="subsection-title fade-in"> Projets<em> professionnels</em> </div>
+  <div class="projects-grid">
+
+    <!-- Interconnexion 5G VoIP -->
+    <div class="project-card fade-in" data-skills="multimedia">
+      <div class="project-visual-area">
+        <svg width="100%" height="100%" viewBox="0 0 340 165" xmlns="http://www.w3.org/2000/svg"><rect fill="#0f0f18" width="340" height="165"/><rect x="30" y="57" width="80" height="50" fill="none" stroke="#7c6af7" stroke-width="1.5" rx="3"/><text x="70" y="79" text-anchor="middle" fill="#7c6af7" font-size="10" font-family="Space Mono" font-weight="700">5G</text><text x="70" y="95" text-anchor="middle" fill="#7c6af7" font-size="6.5" font-family="Space Mono">Core</text><rect x="230" y="57" width="80" height="50" fill="none" stroke="#00d4aa" stroke-width="1.5" rx="3"/><text x="270" y="79" text-anchor="middle" fill="#00d4aa" font-size="10" font-family="Space Mono" font-weight="700">VoIP</text><text x="270" y="95" text-anchor="middle" fill="#00d4aa" font-size="6.5" font-family="Space Mono">Asterisk</text><rect x="140" y="67" width="60" height="30" fill="rgba(224,60,110,.1)" stroke="#e03c6e" stroke-width="1" rx="2"/><text x="170" y="86" text-anchor="middle" fill="#e03c6e" font-size="7" font-family="Space Mono">SIP Trunk</text><line x1="110" y1="82" x2="140" y2="82" stroke="#7c6af7" stroke-width="1.2" opacity=".7" stroke-dasharray="4,2"><animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite"/></line><line x1="200" y1="82" x2="230" y2="82" stroke="#00d4aa" stroke-width="1.2" opacity=".7" stroke-dasharray="4,2"><animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite"/></line><text x="170" y="140" text-anchor="middle" fill="#4a4760" font-size="7" font-family="Space Mono">Docker · Kamailio · FutureNetworx</text></svg>
+      </div>
+      <div class="project-body">
+        <p class="project-type">Stage FutureNetworx · 2026</p>
+        <h3 class="project-title">Interconnexion 5G ↔ VoIP via Trunk SIP</h3>
+        <div class="project-meta">
+          <span class="project-meta-badge">👤 Solo — sous supervision du maître de stage</span>
+        </div>
+        <p class="project-desc">Solution d'interopérabilité entre réseau 5G opérateur et infrastructure VoIP (Asterisk) via Trunk SIP sur Docker/Kamailio. Référentiel technique documenté.</p>
+        <div class="project-skills"><span class="project-skill-tag">Communications unifiées &amp; vidéo</span></div>
+        <div class="project-tech"><span class="tech-pill">5G Core</span><span class="tech-pill">SIP Trunk</span><span class="tech-pill">Asterisk</span><span class="tech-pill">Kamailio</span><span class="tech-pill">Docker</span><span class="tech-pill">VoIP</span></div>
+      </div>
+    </div>
+
+    <!-- Audit 5G LSTM -->
+    <div class="project-card fade-in fade-in-delay-1" data-skills="admin,security">
+      <div class="project-visual-area">
+        <svg width="100%" height="100%" viewBox="0 0 340 165" xmlns="http://www.w3.org/2000/svg"><rect fill="#0f0f18" width="340" height="165"/><circle cx="80" cy="82" r="28" fill="rgba(224,60,110,.07)" stroke="#e03c6e" stroke-width="1.5" stroke-dasharray="5,3"/><text x="80" y="78" text-anchor="middle" fill="#e03c6e" font-size="7.5" font-family="Space Mono">ATTAQUE</text><text x="80" y="90" text-anchor="middle" fill="#e03c6e" font-size="6.5" font-family="Space Mono">simulée</text><rect x="145" y="62" width="55" height="40" fill="none" stroke="#7c6af7" stroke-width="1.5" rx="3"/><text x="172" y="80" text-anchor="middle" fill="#7c6af7" font-size="7.5" font-family="Space Mono">5G Core</text><circle cx="270" cy="82" r="26" fill="rgba(0,212,170,.07)" stroke="#00d4aa" stroke-width="1.5"/><text x="270" y="78" text-anchor="middle" fill="#00d4aa" font-size="7.5" font-family="Space Mono">LSTM</text><text x="270" y="91" text-anchor="middle" fill="#00d4aa" font-size="6.5" font-family="Space Mono">détection</text><line x1="108" y1="82" x2="145" y2="82" stroke="#e03c6e" stroke-width="1" opacity=".7" stroke-dasharray="4,2"/><line x1="200" y1="82" x2="244" y2="82" stroke="#00d4aa" stroke-width="1" opacity=".7" stroke-dasharray="4,2"/><text x="170" y="140" text-anchor="middle" fill="#4a4760" font-size="7" font-family="Space Mono">TRex · Python · Cybersécurité 5G</text></svg>
+      </div>
+      <div class="project-body">
+        <p class="project-type">Stage FutureNetworx · 2026</p>
+        <h3 class="project-title">Audit offensif 5G &amp; modèle de détection LSTM</h3>
+        <div class="project-meta">
+          <span class="project-meta-badge">👥 Binôme</span>
+        </div>
+        <p class="project-desc">Audit offensif du cœur de réseau 5G via simulations d'attaques. Étude de vulnérabilités, entraînement d'un modèle LSTM pour la détection d'anomalies et manipulation du générateur de trafic TRex.</p>
+        <div class="project-tech"><span class="tech-pill">Cybersécurité 5G</span><span class="tech-pill">LSTM / ML</span><span class="tech-pill">TRex</span><span class="tech-pill">Python</span><span class="tech-pill">Audit offensif</span></div>
+      </div>
+    </div>
+
+    <!-- Alerting PowerShell -->
+    <div class="project-card fade-in fade-in-delay-2" data-skills="infra">
+      <div class="project-visual-area">
+        <svg width="100%" height="100%" viewBox="0 0 340 165" xmlns="http://www.w3.org/2000/svg"><rect fill="#0f0f18" width="340" height="165"/><rect x="30" y="22" width="280" height="120" fill="#0a0a0f" stroke="#4a4760" stroke-width="1" rx="4"/><rect x="30" y="22" width="280" height="20" fill="#14141f" stroke="#4a4760" stroke-width="1" rx="4"/><circle cx="46" cy="32" r="4" fill="#e03c6e" opacity=".7"/><circle cx="60" cy="32" r="4" fill="#f7a26a" opacity=".7"/><circle cx="74" cy="32" r="4" fill="#00d4aa" opacity=".7"/><text x="46" y="58" fill="#00d4aa" font-size="7.5" font-family="Space Mono">PS&gt; Send-AlertMail -Host "SRV01"</text><text x="46" y="73" fill="#7c6af7" font-size="7" font-family="Space Mono">✓ Alerte envoyée à admin@corp.fr</text><text x="46" y="88" fill="#00d4aa" font-size="7.5" font-family="Space Mono">PS&gt; Get-NetworkStatus -All</text><text x="46" y="103" fill="#8a87a8" font-size="7" font-family="Space Mono">SRV01: OK | SW02: OK | FW01: OK</text><text x="46" y="118" fill="#00d4aa" font-size="7.5" font-family="Space Mono">PS&gt; _</text></svg>
+      </div>
+      <div class="project-body">
+        <p class="project-type">Stage FutureNetworx · 2026</p>
+        <h3 class="project-title">Surveillance réseau — Alerting PowerShell</h3>
+        <div class="project-meta">
+          <span class="project-meta-badge">👤 Solo</span>
+        </div>
+        <p class="project-desc">Gestion des équipements SMTP, intégration dans l'outil de ticketing et programmation des alertes via scripts PowerShell pour automatiser le monitoring réseau.</p>
+        <div class="project-skills"><span class="project-skill-tag">Gérer infra opérateurs</span></div>
+        <div class="project-tech"><span class="tech-pill">PowerShell</span><span class="tech-pill">SMTP</span><span class="tech-pill">Ticketing</span><span class="tech-pill">Monitoring</span><span class="tech-pill">Automation</span></div>
+      </div>
+    </div>
+
+  </div><!-- /projects-grid pro -->
+
+  <!-- SOUS-SECTION 2 : PROJETS ACADÉMIQUES & PERSONNELS -->
+  <div class="subsection-title fade-in"> Projets <em>académiques &amp; personnels</em></div>
+  <div class="projects-grid">
+
+    <!-- Streaming SAÉ 503 — compétences: admin, creer, multimedia -->
+    <div class="project-card fade-in" data-skills="admin,creer,multimedia">
+      <div class="project-visual-area">
+        <svg width="100%" height="100%" viewBox="0 0 340 165" xmlns="http://www.w3.org/2000/svg"><rect fill="#0f0f18" width="340" height="165"/><circle cx="60" cy="82" r="22" fill="none" stroke="#7c6af7" stroke-width="1.5" opacity=".85"/><text x="60" y="86" text-anchor="middle" fill="#7c6af7" font-size="8" font-family="Space Mono">OBS</text><circle cx="170" cy="82" r="22" fill="none" stroke="#e03c6e" stroke-width="1.5" opacity=".85"/><text x="170" y="86" text-anchor="middle" fill="#e03c6e" font-size="7" font-family="Space Mono">OwnCast</text><circle cx="280" cy="82" r="22" fill="none" stroke="#00d4aa" stroke-width="1.5" opacity=".85"/><text x="280" y="86" text-anchor="middle" fill="#00d4aa" font-size="8" font-family="Space Mono">Client</text><line x1="82" y1="82" x2="148" y2="82" stroke="#7c6af7" stroke-width="1" stroke-dasharray="5,3" opacity=".7"><animate attributeName="stroke-dashoffset" from="0" to="16" dur=".8s" repeatCount="indefinite"/></line><line x1="192" y1="82" x2="258" y2="82" stroke="#00d4aa" stroke-width="1" stroke-dasharray="5,3" opacity=".7"><animate attributeName="stroke-dashoffset" from="0" to="16" dur="1.1s" repeatCount="indefinite"/></line><text x="115" y="72" text-anchor="middle" fill="#7c6af7" font-size="7" font-family="Space Mono" opacity=".7">RTMP</text><text x="225" y="72" text-anchor="middle" fill="#00d4aa" font-size="7" font-family="Space Mono" opacity=".7">HLS</text><text x="170" y="140" text-anchor="middle" fill="#4a4760" font-size="7" font-family="Space Mono">GNS3 · Docker · Wireshark</text></svg>
+      </div>
+      <div class="project-body">
+        <p class="project-type">SAÉ 503 — BUT3 R&T · 2025-2026</p>
+        <h3 class="project-title">Système de streaming multimédia virtualisé</h3>
+        <div class="project-meta">
+          <span class="project-meta-badge">👥 Binôme</span>
+          <span class="project-meta-badge note">Note : 15/20</span>
+        </div>
+        <p class="project-desc">Architecture complète de streaming live virtualisée sous GNS3. Ingestion RTMP (OBS Studio), diffusion HLS via OwnCast conteneurisé. Analyse protocolaire Wireshark + simulation de dégradations réseau.</p>
+        <div class="project-skills"><span class="project-skill-tag">Administrer réseaux</span><span class="project-skill-tag">Créer outils R&T</span><span class="project-skill-tag">Communications unifiées</span></div>
+        <div class="project-tech"><span class="tech-pill">GNS3</span><span class="tech-pill">Docker</span><span class="tech-pill">OBS Studio</span><span class="tech-pill">OwnCast</span><span class="tech-pill">RTMP/HLS</span><span class="tech-pill">Wireshark</span><span class="tech-pill">Debian 13</span></div>
+        <a href="data/projet_streaming.pdf" target="_blank" class="project-link">Voir le Projet<span class="arrow">→</span></a>
+        
+            <!-- demander vidéo à Tristan et l'ajouter -->
+
+      </div>
+    </div>
+
+    <!-- VLAN SAÉ 502 — compétences: admin, connecter, creer -->
+    <div class="project-card fade-in fade-in-delay-1" data-skills="admin,connecter,creer">
+      <div class="project-visual-area">
+        <svg width="100%" height="100%" viewBox="0 0 340 165" xmlns="http://www.w3.org/2000/svg"><rect fill="#0f0f18" width="340" height="165"/><circle cx="170" cy="82" r="20" fill="none" stroke="#7c6af7" stroke-width="1.5"/><text x="170" y="86" text-anchor="middle" fill="#7c6af7" font-size="8" font-family="Space Mono">R</text><rect x="58" y="47" width="54" height="22" fill="none" stroke="#e03c6e" stroke-width="1" rx="2"/><text x="85" y="62" text-anchor="middle" fill="#e03c6e" font-size="6.5" font-family="Space Mono">VLAN 10</text><rect x="58" y="97" width="54" height="22" fill="none" stroke="#00d4aa" stroke-width="1" rx="2"/><text x="85" y="112" text-anchor="middle" fill="#00d4aa" font-size="6.5" font-family="Space Mono">VLAN 20</text><rect x="228" y="72" width="54" height="22" fill="none" stroke="#f7a26a" stroke-width="1" rx="2"/><text x="255" y="87" text-anchor="middle" fill="#f7a26a" font-size="6.5" font-family="Space Mono">VLAN 30</text><line x1="112" y1="58" x2="151" y2="74" stroke="#e03c6e" stroke-width="1" opacity=".6" stroke-dasharray="3,2"/><line x1="112" y1="108" x2="151" y2="90" stroke="#00d4aa" stroke-width="1" opacity=".6" stroke-dasharray="3,2"/><line x1="190" y1="82" x2="228" y2="83" stroke="#f7a26a" stroke-width="1" opacity=".6" stroke-dasharray="3,2"/><text x="170" y="140" text-anchor="middle" fill="#4a4760" font-size="7" font-family="Space Mono">Router-on-a-Stick · ACL · DHCP</text></svg>
+      </div>
+      <div class="project-body">
+        <p class="project-type">SAÉ 502 — BUT3 R&T · 2025</p>
+        <h3 class="project-title">Infrastructure réseau VLAN segmentée — Agile</h3>
+        <div class="project-meta">
+          <span class="project-meta-badge">👥 Groupe de 4</span>
+          <span class="project-meta-badge note">Note : 17/20</span>
+        </div>
+        <p class="project-desc">Pilotage de projet IT en équipe de 4 via GitHub Kanban. Infrastructure Router-on-a-Stick : 3 VLANs, ACLs, DHCP centralisé, 2 serveurs HTTP. 40 commits, branches &amp; pull requests.</p>
+        <div class="project-skills"><span class="project-skill-tag">Administrer réseaux</span><span class="project-skill-tag">Connecter entreprises</span><span class="project-skill-tag">Créer outils R&T</span></div>
+        <div class="project-tech"><span class="tech-pill">Packet Tracer</span><span class="tech-pill">VLAN 802.1Q</span><span class="tech-pill">ACLs</span><span class="tech-pill">DHCP</span><span class="tech-pill">Git</span><span class="tech-pill">Kanban</span><span class="tech-pill">Agile</span></div>
+        <a href="./data/projet_pilotage.pdf" target="_blank" class="project-link">Voir la présentation du projet <span class="arrow">→</span></a>   
+      </div>
+    </div>
+
+    <!-- Wi-Fi RADIUS — compétences: admin, connecter, infra -->
+    <div class="project-card fade-in fade-in-delay-2" data-skills="admin,connecter,infra">
+      <div class="project-visual-area">
+        <svg width="100%" height="100%" viewBox="0 0 340 165" xmlns="http://www.w3.org/2000/svg"><rect fill="#0f0f18" width="340" height="165"/><circle cx="170" cy="90" r="9" fill="#7c6af7" opacity=".85"/><text x="170" y="94" text-anchor="middle" fill="#0a0a0f" font-size="6" font-family="Space Mono" font-weight="700">AP</text><path d="M150 78 Q170 48 190 78" fill="none" stroke="#7c6af7" stroke-width="1.5" opacity=".6"/><path d="M138 70 Q170 30 202 70" fill="none" stroke="#7c6af7" stroke-width="1" opacity=".3"/><rect x="242" y="55" width="70" height="35" fill="none" stroke="#e03c6e" stroke-width="1.5" rx="3"/><text x="277" y="71" text-anchor="middle" fill="#e03c6e" font-size="7.5" font-family="Space Mono">RADIUS</text><text x="277" y="84" text-anchor="middle" fill="#e03c6e" font-size="6.5" font-family="Space Mono">+ MySQL</text><rect x="28" y="65" width="58" height="30" fill="none" stroke="#00d4aa" stroke-width="1" rx="3"/><text x="57" y="77" text-anchor="middle" fill="#00d4aa" font-size="7" font-family="Space Mono">Client</text><text x="57" y="89" text-anchor="middle" fill="#00d4aa" font-size="6.5" font-family="Space Mono">802.1X</text><line x1="86" y1="80" x2="162" y2="87" stroke="#00d4aa" stroke-width="1" opacity=".6" stroke-dasharray="3,2"/><line x1="178" y1="86" x2="242" y2="73" stroke="#e03c6e" stroke-width="1" opacity=".6" stroke-dasharray="3,2"/><text x="170" y="140" text-anchor="middle" fill="#4a4760" font-size="7" font-family="Space Mono">Wi-Fi Entreprise · 2FA</text></svg>
+      </div>
+      <div class="project-body">
+        <p class="project-type">Projet académique · Sécurité</p>
+        <h3 class="project-title">Wi-Fi sécurisée — RADIUS + MySQL + 2FA</h3>
+        <div class="project-meta">
+          <span class="project-meta-badge">👥 Groupe de 4</span>
+          <span class="project-meta-badge note">Note : 18/20</span>
+        </div>
+        <p class="project-desc">Architecture Wi-Fi entreprise avec authentification centralisée RADIUS, gestion des accès MySQL et sécurisation double facteur (2FA). Déploiement sur infrastructure Linux.</p>
+        <div class="project-skills"><span class="project-skill-tag">Administrer réseaux</span><span class="project-skill-tag">Connecter entreprises</span><span class="project-skill-tag">Gérer infra opérateurs</span></div>
+        <div class="project-tech"><span class="tech-pill">RADIUS</span><span class="tech-pill">MySQL</span><span class="tech-pill">Wi-Fi 802.1X</span><span class="tech-pill">2FA</span><span class="tech-pill">Linux</span></div>
+      </div>
+    </div>
+
+  </div><!-- /projects-grid académiques -->
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     CERTIFICATIONS
+     ====================================================== -->
+<section id="certifications">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Distinctions</p>
+    <h2 class="section-title">Certifications <em>&amp; badges</em></h2>
+  </div>
+  <div class="certs-main fade-in">
+    <div class="cert-card">
+      <div class="cert-icon">EN</div>
+      <div><p class="cert-name">TOEIC — 864 points</p><p class="cert-issuer">ETS · Anglais professionnel B2-C1</p></div>
+    </div>
+    <a href="https://www.credly.com/badges/ba55acaf-edd2-4ff3-bc84-b5599cc5f397" target="_blank" class="cert-card">
+      <div class="cert-icon">CSCO</div>
+      <div><p class="cert-name">Technicienne Réseau Certifiée Cisco</p><p class="cert-issuer">Cisco · EMEA CyberCup</p></div>
+      <span class="cert-arrow">→</span>
+    </a>
+    <div class="cert-card">
+      <div class="cert-icon">MCX</div>
+      <div><p class="cert-name">Mission-Critical Services MCX</p><p class="cert-issuer">Hytera · Formation professionnelle</p></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">3CX</div>
+      <div><p class="cert-name">Certification 3CX Basique</p><p class="cert-issuer">3CX · Téléphonie IP</p></div>
+    </div>
+  </div>
+  <div class="fade-in">
+    <p class="certs-sub-title">Cisco — Badges en ligne</p>
+    <div class="certs-sub-grid">
+      <a href="https://www.credly.com/badges/267a8cde-524d-4c75-9627-45f2e1515ec5" target="_blank" class="cert-card"><div class="cert-icon" style="font-size:.6rem">SEC</div><div><p class="cert-name">Sensibilisation à la sécurité numérique</p><p class="cert-issuer">Cisco Networking Academy</p></div><span class="cert-arrow">→</span></a>
+      <a href="https://www.credly.com/badges/e20e5671-f6a1-40b2-a8c3-d274aacf79f3" target="_blank" class="cert-card"><div class="cert-icon" style="font-size:.6rem">NET</div><div><p class="cert-name">Notions de base en matière de réseaux</p><p class="cert-issuer">Cisco Networking Academy</p></div><span class="cert-arrow">→</span></a>
+      <a href="https://www.credly.com/badges/7c07e4e6-024a-4b5d-8391-677d6b3ba28b" target="_blank" class="cert-card"><div class="cert-icon" style="font-size:.6rem">IND</div><div><p class="cert-name">Principes fondamentaux des réseaux industriels</p><p class="cert-issuer">Cisco Networking Academy</p></div><span class="cert-arrow">→</span></a>
+      <a href="https://www.credly.com/badges/27ad4a11-1f34-4a01-9e47-d15b636dd651" target="_blank" class="cert-card"><div class="cert-icon" style="font-size:.6rem">AI</div><div><p class="cert-name">Introduction à l'IA moderne</p><p class="cert-issuer">Cisco Networking Academy</p></div><span class="cert-arrow">→</span></a>
+      <a href="https://www.credly.com/badges/75a660ec-8946-4837-813f-50df66c9bb57" target="_blank" class="cert-card"><div class="cert-icon" style="font-size:.6rem">IoT</div><div><p class="cert-name">Introduction à l'IoT</p><p class="cert-issuer">Cisco Networking Academy</p></div><span class="cert-arrow">→</span></a>
+      <a href="https://www.credly.com/badges/9b343551-ade5-4124-8a5c-d2e8009eef2b" target="_blank" class="cert-card"><div class="cert-icon" style="font-size:.6rem">CYB</div><div><p class="cert-name">Introduction à la cybersécurité</p><p class="cert-issuer">Cisco Networking Academy</p></div><span class="cert-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     THÉÂTRE
+     ====================================================== -->
+<section id="theatre">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Passion</p>
+    <h2 class="section-title">Théâtre <em>&amp; scène</em></h2>
+  </div>
+  <div class="theatre-grid fade-in">
+    <div class="theatre-text">
+      <p>Passionnée de théâtre, j'ai développé à travers la scène des compétences humaines essentielles : la <strong>prise de parole en public</strong>, la <strong>gestion du stress</strong> et la capacité à incarner des personnages avec conviction.</p>
+      <p>Ces qualités se retrouvent directement dans mon quotidien professionnel — que ce soit lors de présentations techniques, du tutorat ou des interactions avec les clients et les équipes.</p>
+    </div>
+    <div class="video-placeholder" id="theatreVideoPlaceholder">
+      <div class="video">
+        <video controls muted preload="none" src="data/theatre.mp4"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     CÔTÉ HUMAIN
+     ====================================================== -->
+<section id="human">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Au-delà du technique</p>
+    <h2 class="section-title">Côté <em>humain</em></h2>
+  </div>
+  <div class="hobbies-grid fade-in">
+    <div class="hobby-card">
+      <!-- Pour ajouter une photo : <div class="hobby-visual"><img src="images/theatre.jpg" alt="Théâtre"></div> -->
+      <div class="hobby-visual-placeholder"><span class="hobby-emoji">🎭</span><span class="hobby-upload-hint"></span></div>
+      <div class="hobby-label"><p class="hobby-name">Théâtre</p><p class="hobby-desc">4 ans · Expression scénique</p></div>
+    </div>
+    <div class="hobby-card">
+      <div class="hobby-visual-placeholder"><span class="hobby-emoji">🏸</span><span class="hobby-upload-hint"></span></div>
+      <div class="hobby-label"><p class="hobby-name">Badminton</p><p class="hobby-desc">Sport &amp; coordination</p></div>
+    </div>
+    <div class="hobby-card">
+      <div class="hobby-visual-placeholder"><span class="hobby-emoji">🚴</span><span class="hobby-upload-hint"></span></div>
+      <div class="hobby-label"><p class="hobby-name">Cyclisme</p><p class="hobby-desc">Endurance &amp; plein air</p></div>
+    </div>
+    <div class="hobby-card">
+      <div class="hobby-visual-placeholder"><span class="hobby-emoji">🛼</span><span class="hobby-upload-hint"></span></div>
+      <div class="hobby-label"><p class="hobby-name">Roller-skating</p><p class="hobby-desc">Équilibre &amp; créativité</p></div>
+    </div>
+    <div class="hobby-card">
+      <div class="hobby-visual-placeholder"><span class="hobby-emoji">🎬</span><span class="hobby-upload-hint"></span></div>
+      <div class="hobby-label"><p class="hobby-name">Montage vidéo</p><p class="hobby-desc">Créativité visuelle</p></div>
+    </div>
+    <div class="hobby-card">
+      <div class="hobby-visual-placeholder"><span class="hobby-emoji">🌍</span><span class="hobby-upload-hint"></span></div>
+      <div class="hobby-label"><p class="hobby-name">Langues &amp; cultures</p><p class="hobby-desc">Curiosité interculturelle</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ======================================================
+     CONTACT
+     ====================================================== -->
+<section id="contact">
+  <div class="contact-inner fade-in">
+    <p class="section-eyebrow" style="justify-content:center">Travaillons ensemble</p>
+    <h2 class="section-title">Prête pour le <em>défi suivant</em></h2>
+    <p>Ingénieure réseau &amp; sécurité disponible pour une alternance dès septembre 2026. À l'écoute d'opportunités en infrastructure, cybersécurité, systèmes ou DevOps réseau.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/irsa-ahmad" target="_blank" class="contact-link">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <div class="mail-btn-wrap">
+        <button class="contact-link mail-trigger" style="border:1px solid var(--border2);background:var(--bg3);">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Mail
+        </button>
+        <div class="mail-reveal">ahmad.irsa[arobase]Hotmail.com</div>
+      </div>
+      <a href="https://github.com/Irsa-crypto" target="_blank" class="contact-link">
+        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="captcha-section">
+      <div class="captcha-box">
+        <div class="captcha-checkbox" id="captchaBox"><span class="captcha-check">✓</span></div>
+        <span class="captcha-label" id="captchaMsg">Je ne suis pas un robot</span>
+        <div class="captcha-badge">reCAPTCHA<br>Confidentialité · Conditions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FOOTER
+     ====================================================== -->
+<footer>
+  <p class="footer-left">© 2026 Irsa Ahmad — Tous droits réservés</p>
+  <div class="footer-links">
+    <a href="data/rgpd_irsa_ahmad.pdf" target="_blank" class="footer-rgpd">Politique de confidentialité (RGPD)</a>
+    <p class="footer-right">Ingénieure <span>Réseaux &amp; Sécurité</span> · ESIEE Paris</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
